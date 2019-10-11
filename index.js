@@ -1,4 +1,4 @@
-const port = 3000,
+const port = 80,
   http = require("http"),
   httpStatus = require("http-status-codes"),
   fs = require("fs");
