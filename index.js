@@ -11,6 +11,9 @@ const getViewURL = (url) => {
   return `views${url}.html`;
 };
 
+var access = fs.createWriteStream('/var/log/hotburger/api.log');
+process.stdout.write = access.write.bind(access);
+
 http
   .createServer((req, res) => {
     let viewURL = getViewURL(req.url);
