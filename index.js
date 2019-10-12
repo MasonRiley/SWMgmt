@@ -16,8 +16,8 @@ http
     let viewURL = getViewURL(req.url);
     fs.readFile(viewURL, (error, data) => {
       if(error) {
-        res.writeHead(httpStatus.NOT_FOUND);
-        res.write("<h1>FILE NOT FOUND</h1>");
+        res.writeHead(httpStatus.NOT_FOUND);a
+        res.write("<h1>Welcome to Burger Place!</h1>");
       } else {
         res.writeHead(httpStatus.OK, {
           "Content-Type": "text/html"
