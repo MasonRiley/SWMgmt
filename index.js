@@ -16,7 +16,7 @@ http
     let viewURL = getViewURL(req.url);
     fs.readFile(viewURL, (error, data) => {
       if(error) {
-        res.writeHead(httpStatus.NOT_FOUND);a
+        res.writeHead(httpStatus.NOT_FOUND);
         res.write("<h1>Welcome to Burger Place!</h1>");
       } else {
         res.writeHead(httpStatus.OK, {
