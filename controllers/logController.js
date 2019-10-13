@@ -1,4 +1,4 @@
-exports.writeLogEntry = function(data) {
+exports.log = function(data) {
   const fs = require('fs');
   var stream = fs.createWriteStream('/var/log/hotburger/api.log', {flags:'a'});
   var today = new Date();
@@ -13,7 +13,7 @@ exports.printLog = (req, res) => {
   var array = fs.readFileSync('/var/log/hotburger/api.log').toString().split("\n");
 
   var logger = require('./logController');
-  logger.writeLogEntry(('GET for ' + req.originalUrl + ' successful.'));
+  logger.log(('GET for ' + req.originalUrl + ' successful.'));
 
   //Set up HTML
   res.write('<html>');
