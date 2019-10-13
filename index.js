@@ -5,7 +5,6 @@ const port = 80,
 
 app.use((req, res, next) => {
    logger.log(('GET request for ' + req.originalUrl));
-   console.log("TEST IS A TESSSSST");
    next();
 });
 
